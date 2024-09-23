@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <style>
+      .button-custom {
+      background-color: #2b669a; /* Main theme color */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .button-custom:hover {
+      background-color: #1d4f73; /* Darker shade for hover */
+      transform: scale(1.05); /* Slightly enlarges button on hover */
+    }
+    .button-custom:active {
+      background-color: #163d59; /* Even darker on click */
+      transform: scale(0.98); /* Shrinks button slightly on click */
+    }
+    .button-custom:focus {
+      outline: none;
+      box-shadow: 0 0 5px #2b669a; /* Adds a shadow on focus */
+    }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | 2d Run Away</title>
@@ -8,6 +32,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <a href="https://voyager162.github.io/weston_2025"><button class="button-custom">Back to home page</button></a>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
